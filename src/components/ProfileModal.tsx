@@ -38,7 +38,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
         <div className="space-y-3.5 text-xs">
           <div>
             <label className="block font-medium text-slate-700 mb-1">
-              Portrait Image (Defaults to `link.jpeg` or upload directly):
+              Profile Photo (Defaults to `/profile.jpg` or upload directly):
             </label>
             <button
               onClick={() => fileInputRef.current?.click()}

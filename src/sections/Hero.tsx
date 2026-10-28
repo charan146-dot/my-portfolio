@@ -3,28 +3,23 @@ import {
   ChevronRight,
   ExternalLink,
   ArrowUpRight,
-  Upload,
   MapPin,
 } from 'lucide-react';
 import { ProfileConfig } from '../types';
 
 interface HeroProps {
   scrollTo: (id: string) => void;
-  portraitSrc: string;
-  imageError: boolean;
-  setImageError: (hasError: boolean) => void;
-  fileInputRef: RefObject<HTMLInputElement>;
-  handlePhotoUpload: (e: ChangeEvent<HTMLInputElement>) => void;
+  portraitSrc?: string;
+  imageError?: boolean;
+  setImageError?: (hasError: boolean) => void;
+  fileInputRef?: RefObject<HTMLInputElement>;
+  handlePhotoUpload?: (e: ChangeEvent<HTMLInputElement>) => void;
   profileConfig: ProfileConfig;
 }
 
 export const Hero: React.FC<HeroProps> = ({
   scrollTo,
-  portraitSrc,
-  imageError,
-  setImageError,
-  fileInputRef,
-  handlePhotoUpload,
+  portraitSrc = '/profile.jpg',
   profileConfig,
 }) => {
   return (
@@ -118,7 +113,7 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
 
-        {/* Right 5 Columns: Natural Greenery Portrait Card (`link.jpeg`) */}
+        {/* Right 5 Columns: Natural Greenery Portrait Card */}
         <div className="lg:col-span-5 flex justify-center">
           <div className="relative w-full max-w-sm">
             {/* Soft decorative botanical backdrop card */}
@@ -126,53 +121,12 @@ export const Hero: React.FC<HeroProps> = ({
 
             <div className="relative bg-white border-2 border-emerald-100 rounded-3xl p-3 shadow-xl shadow-emerald-900/5">
               <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-emerald-50">
-                {!imageError ? (
-                  <img
-                    src={portraitSrc}
-                    alt="Charan Tej standing in greenery"
-                    onError={() => setImageError(true)}
-                    className="w-full h-full object-cover object-center"
-                  />
-                ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-emerald-50 to-emerald-100/60">
-                    <div className="w-16 h-16 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-mono text-2xl font-bold mb-3 shadow-md">
-                      CT
-                    </div>
-                    <p className="text-sm font-semibold text-emerald-950 mb-1">
-                      Charan Tej Portrait (`link.jpeg`)
-                    </p>
-                    <p className="text-xs text-slate-600 mb-4">
-                      Click below to select `link.jpeg` from your device if your browser sandbox
-                      requires local file permission:
-                    </p>
-                    <button
-                      onClick={() => fileInputRef.current?.click()}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium px-4 py-2 rounded-lg flex items-center gap-1.5 shadow-sm cursor-pointer"
-                    >
-                      <Upload className="w-3.5 h-3.5" />
-                      <span>Select `link.jpeg` Photo</span>
-                    </button>
-                  </div>
-                )}
-
-                {/* Hidden file input so user can always swap/reload their photo */}
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept="image/*"
-                  onChange={handlePhotoUpload}
-                  className="hidden"
+                <img
+                  src="/profile.jpg"
+                  alt="Charan Tej - Aspiring Full-Stack Developer and Software Engineer"
+                  className="w-full h-full object-cover object-[50%_20%]"
+                  style={{ objectFit: 'cover', objectPosition: '50% 20%' }}
                 />
-
-                {/* Subtle Change Photo Button in top-right corner */}
-                <button
-                  onClick={() => fileInputRef.current?.click()}
-                  title="Upload or change portrait photo"
-                  className="absolute top-3 right-3 bg-white/90 hover:bg-white text-emerald-900 border border-emerald-200/80 backdrop-blur-xs px-2.5 py-1 rounded-lg text-[11px] font-medium flex items-center gap-1 shadow-xs transition-all cursor-pointer"
-                >
-                  <Upload className="w-3 h-3 text-emerald-600" />
-                  <span>Photo</span>
-                </button>
               </div>
 
               {/* Clean Caption Strip Below Photo */}

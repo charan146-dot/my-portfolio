@@ -11,8 +11,8 @@ import { Education } from './sections/Education';
 import { ProfileConfig } from './types';
 
 export default function App() {
-  // User Portrait Image State (Defaults to uploaded `link.jpeg` or fallback with live upload option)
-  const [portraitSrc, setPortraitSrc] = useState<string>('/link.jpeg');
+  // User Portrait Image State (Defaults to `/profile.jpg`)
+  const [portraitSrc, setPortraitSrc] = useState<string>('/profile.jpg');
   const [imageError, setImageError] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -59,10 +59,6 @@ export default function App() {
         <Hero
           scrollTo={scrollTo}
           portraitSrc={portraitSrc}
-          imageError={imageError}
-          setImageError={setImageError}
-          fileInputRef={fileInputRef}
-          handlePhotoUpload={handlePhotoUpload}
           profileConfig={profileConfig}
         />
 
@@ -82,6 +78,15 @@ export default function App() {
 
       {/* Footer */}
       <Footer scrollTo={scrollTo} />
+
+      {/* Hidden file input for ProfileModal image customization */}
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/*"
+        onChange={handlePhotoUpload}
+        className="hidden"
+      />
 
       {/* Profile & Photo Customization Modal */}
       <ProfileModal
