@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6F4ED" />
+      <stop offset="50%" stop-color="#D1FAE5" />
+      <stop offset="100%" stop-color="#A7F3D0" />
+    </linearGradient>
+    <linearGradient id="personGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065F46" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+  <!-- Background Lush Greenery Simulation -->
+  <rect width="400" height="500" rx="24" fill="url(#bgGrad)" />
+  <circle cx="80" cy="100" r="120" fill="#10B981" opacity="0.18" />
+  <circle cx="320" cy="140" r="140" fill="#059669" opacity="0.14" />
+  <circle cx="200" cy="460" r="220" fill="#047857" opacity="0.25" />
+  
+  <!-- Stylized Figure Placeholder -->
+  <circle cx="200" cy="190" r="65" fill="url(#personGrad)" stroke="#FFFFFF" stroke-width="4" />
+  <path d="M 110 390 C 110 290, 290 290, 290 390 Z" fill="url(#personGrad)" stroke="#FFFFFF" stroke-width="4" />
+  
+  <!-- Monogram & Label -->
+  <text x="200" y="200" font-family="'JetBrains Mono', monospace" font-size="34" font-weight="700" fill="#ECFDF5" text-anchor="middle" dominant-baseline="middle">CT</text>
+  <rect x="100" y="420" width="200" height="34" rx="10" fill="#064E3B" opacity="0.9" />
+  <text x="200" y="442" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#ECFDF5" text-anchor="middle">Charan Tej (link.jpeg)</text>
+</svg>
