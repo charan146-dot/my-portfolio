@@ -15,14 +15,14 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 }) => {
   return (
     <div className="mb-8">
-      <span className="text-xs font-mono uppercase tracking-wider text-emerald-700 font-semibold block">
+      <span className="text-xs font-mono uppercase tracking-wider text-yellow-400 font-semibold block">
         {number} · {category}
       </span>
-      <h2 className="text-2xl sm:text-3xl font-bold text-emerald-950 mt-1">
+      <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
         {title}
       </h2>
       {description && (
-        <p className="text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
+        <p className="text-sm text-zinc-400 mt-1 max-w-2xl leading-relaxed">
           {description}
         </p>
       )}

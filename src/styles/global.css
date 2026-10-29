@@ -11,14 +11,14 @@
   }
 
   body {
-    background-color: #FAFDFB;
-    color: #1e293b;
+    background-color: #000000;
+    color: #f4f4f5;
     overflow-x: hidden;
   }
 
   ::selection {
-    background-color: #059669;
-    color: #ffffff;
+    background-color: #facc15;
+    color: #000000;
   }
 }
 
@@ -29,14 +29,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0fdf4;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a7f3d0;
+  background: #ca8a04;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #059669;
+  background: #facc15;
 }

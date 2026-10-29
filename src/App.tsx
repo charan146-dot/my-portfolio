@@ -47,7 +47,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFDFB] text-slate-800 font-sans selection:bg-emerald-600 selection:text-white">
+    <div className="min-h-screen bg-black text-zinc-100 font-sans selection:bg-yellow-400 selection:text-black">
       {/* Sticky Header Navigation */}
       <Navbar
         scrollTo={scrollTo}

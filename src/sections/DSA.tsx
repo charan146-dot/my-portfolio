@@ -9,13 +9,13 @@ interface DSAProps {
 export const DSA: React.FC<DSAProps> = ({ leetcodeCount }) => {
   return (
     <section id="dsa" className="py-12 px-4 sm:px-6 max-w-6xl mx-auto">
-      <div className="bg-white border border-emerald-200/80 rounded-3xl p-6 sm:p-8 shadow-xs">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-emerald-100">
+      <div className="bg-zinc-950/90 border border-yellow-500/25 rounded-3xl p-6 sm:p-8 shadow-xl shadow-black/60">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-zinc-800">
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-emerald-700 font-semibold block">
+            <span className="text-xs font-mono uppercase tracking-wider text-yellow-400 font-semibold block">
               04 · Coding Practice & Problem Solving
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-emerald-950 mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
               Data Structures & Algorithms
             </h2>
           </div>
@@ -24,7 +24,7 @@ export const DSA: React.FC<DSAProps> = ({ leetcodeCount }) => {
             href="https://leetcode.com/cherrysmm"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-medium px-5 py-2.5 rounded-xl transition-all shadow-xs self-start md:self-auto"
+            className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-black text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition-all shadow-md self-start md:self-auto"
           >
             <Terminal className="w-4 h-4" />
             <span>LeetCode Profile (@cherrysmm)</span>
@@ -33,23 +33,23 @@ export const DSA: React.FC<DSAProps> = ({ leetcodeCount }) => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6 items-center">
-          {/* Left 5 Cols: Historical Milestone Box */}
-          <div className="lg:col-span-5 bg-[#F6FBF8] border border-emerald-200/80 rounded-2xl p-5">
-            <div className="text-xs font-mono text-emerald-800 uppercase font-semibold mb-1">
+          {/* Left 5 Cols: Milestone Box */}
+          <div className="lg:col-span-5 bg-zinc-900/80 border border-yellow-500/25 rounded-2xl p-5">
+            <div className="text-xs font-mono text-yellow-400 uppercase font-semibold mb-1">
               Coding Interview Preparation
             </div>
-            <div className="text-xl sm:text-2xl font-bold text-emerald-950 mb-2">
+            <div className="text-xl sm:text-2xl font-bold text-white mb-2 drop-shadow-[0_2px_8px_rgba(250,204,21,0.2)]">
               {leetcodeCount}
             </div>
-            <p className="text-xs text-slate-600 leading-relaxed mb-4">
+            <p className="text-xs text-zinc-300 leading-relaxed mb-4">
               Practicing algorithmic problem-solving primarily in{' '}
-              <span className="font-semibold text-emerald-950">Java</span>. (~220 solved is a
+              <span className="font-semibold text-yellow-400">Java</span>. (~220 solved is a
               previously reported historical figure—visit{' '}
               <a
                 href="https://leetcode.com/cherrysmm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-emerald-700 underline font-medium"
+                className="text-yellow-400 underline font-medium hover:text-yellow-300"
               >
                 leetcode.com/cherrysmm
               </a>{' '}
@@ -59,7 +59,7 @@ export const DSA: React.FC<DSAProps> = ({ leetcodeCount }) => {
               {DSA_TOPICS.map((topic) => (
                 <span
                   key={topic}
-                  className="text-[11px] font-mono bg-white border border-emerald-200 text-emerald-900 px-2.5 py-1 rounded-md"
+                  className="text-[11px] font-mono bg-black border border-yellow-500/30 text-yellow-200 px-2.5 py-1 rounded-md"
                 >
                   {topic}
                 </span>
@@ -72,12 +72,12 @@ export const DSA: React.FC<DSAProps> = ({ leetcodeCount }) => {
             {DSA_APPROACH_STEPS.map((item) => (
               <div
                 key={item.step}
-                className="bg-[#FAFDFB] border border-emerald-100 rounded-2xl p-4"
+                className="bg-zinc-900/60 border border-zinc-800 hover:border-yellow-500/40 rounded-2xl p-4 transition-colors"
               >
-                <div className="text-xs font-mono font-bold text-emerald-800 mb-1">
+                <div className="text-xs font-mono font-bold text-yellow-400 mb-1">
                   {item.step}
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+                <p className="text-xs text-zinc-300 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
